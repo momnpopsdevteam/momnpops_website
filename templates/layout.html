@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mom &amp; Pops' Flag Shop</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <title>Mom &amp; Pops Flag Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body class="font-comic-sans bg-amber-700">
     <header>
 
-      <div class="mx-auto bg-gradient-to-r from-purple-500 to-pink-500">
+      <div class="mx-auto bg-gradient-to-r from-purple-500 to-pink-500 flex flex-wrap justify-around">
+        <a href="{{ url_for('home') }}"><img class="object-contain h-48 w-48" style="background-color:transparent" src="../static/img/WFlag.png"></a>
         <a href="{{ url_for('home') }}"><img class="mx-auto" src="{{ url_for('static', filename='img/logo.png') }}"></a>
+        <a href="{{ url_for('home') }}"><img class="object-contain h-48 w-48" style="background-color:transparent" src="../static/img/BFlag.png"></a>
       </div>
 
       <ul class="bg-amber-600 grid grid-cols-6 hover:grid-cold-6 place-items-center justify-around">
         <li class="border-solid border-black"><a href="{{ url_for('home') }}" class="text-[13px]  tracking-widest text-white/80">Home</a></li>
-        <li><a href="{{ url_for('about') }}" class="text-[13px]  tracking-widest text-white/80">About Us</a></li>
+        <li><a href="{{ url_for('about') }}" class="text-[13px]  tracking-widest text-white/80">Our Story</a></li>
         <li><a href="{{ url_for('products') }}" class="text-[13px]  tracking-widest text-white/80">Products</a></li>
         <li><a href="{{ url_for('contact') }}" class="text-[13px]  tracking-widest text-white/80">Contact</a></li>
       </ul>
