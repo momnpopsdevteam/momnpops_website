@@ -47,5 +47,13 @@ def contact():
 def employees():
     return render_template("employees.html", data=get_employees())
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
 if __name__ == '__main__':
 	app.run(debug=(len(sys.argv)>1 and sys.argv[1]=="--debug"))
